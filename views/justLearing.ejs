@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include( 'componets/header',{discription:"using description from main.ejs"}) %>
+
+    <h1>Hello world</h1>  
+    <!-- using a variable -->
+    <h2>Topic <%= name %></h2>
+    <!-- if else statement -->
+    <%if(id>10){%>
+        <h3>no work to do</h3>
+    <%}else{%>
+        <h3>work to do</h3>
+        <p>and the works are</p>
+        <ul>
+            <!-- forEach loop -->
+            <%tasks.forEach((e)=>{%>
+                <li><%=e%></li>
+            <%})%>
+        </ul>
+    <%}%>
+
+    <h3>Something more</h3>
+    <!-- for loop -->
+    <%for(i=0;i<10;i++){ %>
+        <p><%=randomWord%></p>
+    <%}%>
+
+</body>
+</html>
